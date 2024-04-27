@@ -1,12 +1,12 @@
 :root {
     --Nutmeg: hsl(14, 45%, 36%);
-    --Dark: Raspberry: hsl(332, 51%, 32%);
+    --Dark-raspberry: hsl(332, 51%, 32%);
     --White: hsl(0, 0%, 100%);
-    --Rose-White: hsl(330, 100%, 98%);
+    --Rose-white: hsl(330, 100%, 98%);
     --Eggshell: hsl(30, 54%, 90%);
     --Light-Grey: hsl(30, 18%, 87%);
-    --Wenge-Brown: hsl(30, 10%, 34%);
-    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --Wenge-brown: hsl(30, 10%, 34%);
+    --Dark-charcoal: hsl(24, 5%, 18%);
     --base-size: 1rem;
     --scale: 1.25;
     --h5: calc(var(--base-size) * var(--scale));
@@ -33,11 +33,161 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    background: var(--Light-Grey);
+    background: var(--White);
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: var(--Wenge-brown);
+    min-height: 100vh;
 }
 
-.recipe-title {
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+
+.recipe-title,
+.preparation-title,
+.ingredients-title,
+.instruction-title,
+.nutrition-title {
     font-family: "Young Serif", serif;
     font-weight: 400;
 }
+
+.preparation-title,
+.ingredients-title,
+.instruction-title,
+.nutrition-title {
+   font-size: var(--h2);
+}
+
+.preparation-title,
+.ingredients-title,
+.instruction-title,
+.nutrition > * {
+    margin-left: 1.3rem;
+}
+
+.main-container {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.recipe-wrapper {
+    width: 100%;
+    height: 100%;   
+}
+
+.recipe-details,
+.preparation,
+.ingredients,
+.instruction,
+.nutrition {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.ingredients-title,
+.instruction-title,
+.nutrition-title {
+    color: var(--Nutmeg);
+}
+
+.instruction-item::marker,
+.ingredients-item::marker{
+  color: var(--Nutmeg);
+}
+
+.instruction-item,
+.ingredients-item,
+.preparation-item{
+    padding-left: .8rem;
+}
+
+/* PREPARATION SECTION */
+.preparation{
+    background: var(--Rose-white);
+    border-radius: 5px;
+    padding: .5em .9em;
+}
+
+.preparation-title {
+    color: var(--Dark-raspberry);
+    font-weight: 600;
+}
+
+.sub-prep {
+    color: var(--Wenge-brown);
+    font-weight: 600;
+}
+
+.preparation-item {
+    padding-bottom: .7rem;
+}
+
+.preparation-item::marker {
+    color: var(--Dark-raspberry);
+}
+
+/* INGREDIENTS SECTION*/
+.ingredients {
+    box-shadow: 0px 1px 1px var(--Wenge-brown);
+}
+
+/* INSTRUCTION SECTION */
+.instruction {
+    background: var(--Light-Grey);
+    box-shadow: 0px 4px 2px rgb(0,0,0,.4);
+    margin-bottom: var(--h3);
+    padding: .1em .2em;
+}
+
+.item-title-instruction {
+    color: var(--Dark-charcoal);
+    font-weight: 600;
+}
+
+.instruction-item {
+    padding-bottom: .5rem;
+}
+
+ /* NUTRITION SECTION */
+ .nutrition {
+    padding: 1rem 0 2rem;
+ }
+
+ .nutition-item {
+    box-shadow: 0px 2px 1px rgb(0,0,0,.4);
+    padding: var(--base-size);
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .nutri-unit {
+    color: var(--Nutmeg);
+    font-weight: 600;
+ }
+
+
+ /* MEDIA QUERIES */
+
+ @media (min-width: 816px) {
+
+    body {
+        background: var(--Eggshell);
+    }
+    .main-container {
+        width: 80vw;
+        max-width: 816px;
+        margin: 1.5rem auto;
+        padding: 2.3rem;
+        border-radius: var(--base-size);
+        background: var( --White);
+    }
+   
+ }
+
+
 
